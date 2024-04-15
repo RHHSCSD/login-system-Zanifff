@@ -46,6 +46,7 @@ public class Account {
     }
     
     public String encrypt(String password) throws NoSuchAlgorithmException{ //throws for now
+        password += "!@#";
         //java helper class to perform encryption
         MessageDigest md = MessageDigest.getInstance("MD5");
         //give the helper function the password

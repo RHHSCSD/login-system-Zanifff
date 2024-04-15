@@ -29,6 +29,8 @@ public class Login {
     public boolean userLogin (String user, String password) throws NoSuchAlgorithmException{
         boolean success = false;
         for (int i = 0; i < getAccountList().size(); i++){
+            System.out.println("ex: " + getAccountList().get(i).getPassword());
+            System.out.println("input: " + encrypt(password));
             if (user.equals(getAccountList().get(i).getUsername()) && encrypt(password).equals(getAccountList().get(i).getPassword())){
                 success = true;
             }
